@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 🚀 Prerequisites
 
-## Get started
+![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-blue)
+![Android](https://img.shields.io/badge/Android-SDK%20Setup-green)
+![Homebrew](https://img.shields.io/badge/Homebrew-Installed-orange)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🍏 MacOS Setup
 
-2. Start the app
+### ✅ Install Homebrew
+Ensure you have **Homebrew** installed on your macOS. If not, install it by running:
 
-   ```bash
-    npx expo start
-   ```
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+````
 
-In the output, you'll find options to open the app in a
+### ✅ Install Watchman
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Ensure you have **Watchman** installed on your macOS. If not, install it by running:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+brew install watchman
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### ✅ Install OpenJDK (Azul Zulu) - For Android
 
-## Learn more
+Ensure you have **Azul Zulu JDK** installed on your macOS. If not, install it by running:
 
-To learn more about developing your project with Expo, look at the following resources:
+```sh
+brew install --cask zulu@17
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+After installation, add the `JAVA_HOME` environment variable in your shell profile:
 
-## Join the community
+```sh
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+```
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🤖 Android Setup
+
+### 🔹 Install Android Studio
+
+Download and install [Android Studio](https://developer.android.com/studio).
+
+📌 **Steps:**
+
+1. Open **Android Studio**, click **More Actions** → **SDK Manager**.
+2. Navigate to **Settings** → **Languages & Frameworks** → **Android SDK**.
+3. In the **SDK Platforms** tab, select the latest Android version (API level).
+4. Go to the **SDK Tools** tab and install:
+   - 📦 **Android SDK Build-Tools**
+   - 📦 **Android Emulator**
+5. Copy the **Android SDK Location**.
+6. Click **Apply** and **OK** to install.
+
+### 🔹 Set Up Environment Variables (MacOS/Linux)
+
+Add the following lines to your **\~/.zshrc** or **\~/.bash\_profile**:
+
+```sh
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
+
+### 🔹 Apply Changes
+
+Reload the path environment variables:
+
+```sh
+source ~/.zshrc  # or source ~/.bash_profile
+```
+
+---
+
+## 🚀 Initialize the Expo App
+
+```sh
+npx create-expo-app@latest project_name
+cd project_name
+npm run reset-project  # It removes the boilerplate code
+npx expo start
+```
+
+---
+
+## 📱 Building the iOS App
+
+Follow these steps to build the iOS app:
+
+```sh
+npx expo prebuild --platform ios
+cd ios && pod install
+cd ..
+open ios/project_name.xcworkspace  # Open in Xcode
+```
+
+### 🔹 Build & Archive
+
+1. Build the app.
+2. Click on **"Archive"** from the **Product** tab.
+3. Once the build is successful, distribute the app to **TestFlight**.
+
+---
+
+
+---
+
+🚀 **You're now ready to build and deploy!** Let me know if you need further refinements. 😊
+
