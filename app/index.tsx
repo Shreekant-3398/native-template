@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 export default function Index() {
   return (
@@ -7,9 +7,14 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#fff",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Image
+        source={require('../assets/images/BetalecticLogo.png')}
+        style={{ width: 500, height: 100 }} // Adjust the width and height as needed
+        resizeMode="contain" // Use contain to ensure the image is not cropped
+      />
     </View>
   );
 }

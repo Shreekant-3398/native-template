@@ -10,14 +10,14 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.nativetemplate"
+      "bundleIdentifier": "com.betalectic.betaExpoTemplate"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.nativetemplate"
+      "package": "com.betalectic.betaExpoTemplate"
     },
     "web": {
       "bundler": "metro",
