@@ -11,6 +11,7 @@
     "test": "jest --watchAll",
     "lint": "expo lint",
     "pod-install": "cd ios && pod install && cd ..",
+    "clean:android:build": "cd android && ./gradlew clean && cd ..",
     "build:staging:apk": "cp .env.staging .env && cd android && ./gradlew assembleRelease && cd .. && ./copyToDesktop.sh staging",
     "build:production:apk": "cp .env.production .env && cd android && ./gradlew assembleRelease && cd .. && ./copyToDesktop.sh production",
     "build:production:aab": "cp .env.production .env && cd android && ./gradlew bundleRelease && cd .. && ./copyToDesktop.sh production"

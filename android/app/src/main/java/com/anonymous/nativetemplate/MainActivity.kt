@@ -1,4 +1,4 @@
-package com.anonymous.nativetemplate
+package com.betalectic.betaExpoTemplate
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

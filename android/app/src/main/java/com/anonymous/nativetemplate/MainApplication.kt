@@ -1,4 +1,4 @@
-package com.anonymous.nativetemplate
+package com.betalectic.betaExpoTemplate
 
 import android.app.Application
 import android.content.res.Configuration
