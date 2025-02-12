@@ -1,13 +1,16 @@
-// Can be removed if don't want to use the layout
-
 import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 export default function RootLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerTitle: "Betalectic",
-      }}
-    />
+    <>
+      <StatusBar style="light" translucent={true} />
+      <Stack
+        screenOptions={{
+          headerTitle: "Betalectic", // Set the header title to "Betalectic"
+          headerShown: false, // Hide the header
+        }}
+      />
+    </>
   );
 }

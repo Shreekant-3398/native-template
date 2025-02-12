@@ -19,8 +19,8 @@ timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # Define the destination paths to the Desktop
 desktop_path="$HOME/Desktop"
-apk_dest="$desktop_path/${timestamp}-wiredup-${selected_env}.apk"
-aab_dest="$desktop_path/${timestamp}-wiredup-${selected_env}.aab"
+apk_dest="$desktop_path/${timestamp}-expoBetaTemplate-${selected_env}.apk"
+aab_dest="$desktop_path/${timestamp}-expoBetaTemplate-${selected_env}.aab"
 
 # Copy the APK file to the Desktop if it exists
 if [ -f "$apk_source_path" ]; then
