@@ -14,8 +14,3 @@ local.properties
 
 # Bundle artifacts
 *.jsbundle
-
-# Ignore environment variable files
-.env
-.env.staging
-.env.production
